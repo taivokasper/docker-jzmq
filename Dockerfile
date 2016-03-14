@@ -3,7 +3,7 @@ FROM taivokasper/debian-maven3:latest
 MAINTAINER Taivo Käsper <taivo.kasper@gmail.com>
 
 RUN apt-get update -y
-RUN apt-get install -y build-essential make pkg-config libtool autoconf automake curl
+RUN apt-get install -y build-essential make pkg-config libtool libtool-bin autoconf automake curl
 
 WORKDIR /opt
 
@@ -32,7 +32,7 @@ RUN ./autogen.sh && \
     ./configure && \
     make && \
     make install && \
-    ldconfig && \
+    ldconfig
 
 WORKDIR /opt
 
@@ -42,3 +42,5 @@ RUN apt-get remove -y build-essential make pkg-config libtool autoconf automake 
     apt-get -y autoremove && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ENV LD_LIBRARY_PATH /usr/local/lib
+
+WORKDIR /root
