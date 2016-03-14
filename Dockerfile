@@ -1,4 +1,4 @@
-FROM taivokasper/debian-maven3:latest
+FROM taivokasper/nodejs:latest
 
 MAINTAINER Taivo Käsper <taivo.kasper@gmail.com>
 
