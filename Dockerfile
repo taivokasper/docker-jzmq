@@ -3,7 +3,8 @@ FROM taivokasper/nodejs:latest
 MAINTAINER Taivo Käsper <taivo.kasper@gmail.com>
 
 RUN apt-get update -y
-RUN apt-get install -y build-essential make pkg-config libtool libtool-bin autoconf automake curl
+RUN apt-get install -y build-essential make pkg-config libtool libtool-bin autoconf automake curl \
+    bzip2
 
 WORKDIR /opt
 
