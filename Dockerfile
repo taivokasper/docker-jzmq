@@ -4,7 +4,7 @@ MAINTAINER Taivo Käsper <taivo.kasper@gmail.com>
 
 RUN apt-get update -y
 RUN apt-get install -y build-essential make pkg-config libtool libtool-bin autoconf automake curl \
-    bzip2
+    bzip2 libfreetype6 libfontconfig1
 
 WORKDIR /opt
 
